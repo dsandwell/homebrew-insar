@@ -7,7 +7,7 @@ class Gmtsar < Formula
   desc "An open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT). The code is written in C and will compile on any computer where GMT and NETCDF are installed."
   homepage "https://topex.ucsd.edu/gmtsar/"
 #  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar"
-  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar", :using => CurlDownloadStrategy
+  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar", :curl
   sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
 
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
