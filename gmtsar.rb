@@ -2,7 +2,7 @@
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST
 
-class Curl_nocertificate < curl
+class Curl_nocertificate < "curl"
 end
 
 class Gmtsar < Formula
