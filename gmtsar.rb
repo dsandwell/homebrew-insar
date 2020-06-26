@@ -4,15 +4,11 @@
 
 class Gmtsar < Formula
   desc "An open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT). The code is written in C and will compile on any computer where GMT and NETCDF are installed."
-  homepage "http://gmt.soest.hawaii.edu/projects/gmt5sar"
-  #url "https://elenacreinisch.com/gmtsar/GMTSAR-5.6.tar.gz"
-  #sha256 "0f7326f46aedf1e8e4dc80dd03f1ae8681f52a8253dc4a00a943aec14562994b"
-  #url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.7.tar"
-  #sha256 "dd25bb7e5e501a220c70ebd7ec3692e058004e9bf0db1868b7b40a69bb252a19"
+  homepage "https://topex.ucsd.edu/gmtsar/"
   url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar"
   sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
 
-  option "without-gmt", "Does not install GMT5; use this option only if you already installed GMT5 with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
+  option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
   
   if build.without? "gmt"
     depends_on "cmake" => :build
@@ -34,8 +30,8 @@ class Gmtsar < Formula
   end
 
   def caveats; <<-EOS
-      GMTSARv5.8 currently uses GMT5 or GMT6.  Installing without options will automatically install GMT5 with all libraries using a Homebrew formula.  
-If you already have GMT5 installed with all the (previously optional) libraries, use the without-gmt option at installation. If you choose to use the without-gmt option, please make sure that GMT6 will be accessible to GMTSAR at runtime (i.e., included in your path). This is strongly discouraged because it is unlikely that you will have all of the dependencies in the correct locations for Homebrew. 
+      GMTSARv5.8 currently uses GMT5 or GMT6.  Installing without options will automatically install GMT6 with all libraries using a Homebrew formula.  
+If you already have GMT installed with all the (previously optional) libraries, use the without-gmt option at installation. If you choose to use the without-gmt option, please make sure that GMT6 will be accessible to GMTSAR at runtime (i.e., included in your path). This is strongly discouraged because it is unlikely that you will have all of the dependencies in the correct locations for Homebrew. 
       EOS
   end
 
