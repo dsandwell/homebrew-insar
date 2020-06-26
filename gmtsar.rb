@@ -13,11 +13,9 @@ class Gmtsar < Formula
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
   
   if build.without? "gmt"
-    depends_on "curl"
     depends_on "cmake" => :build
     depends_on "autoconf" => :build
   else
-    depends_on "curl"
     depends_on "cmake" => :build
     depends_on "autoconf" => :build
     depends_on "gmt" => "with-v5"
