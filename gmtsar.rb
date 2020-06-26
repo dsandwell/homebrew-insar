@@ -11,11 +11,13 @@ class Gmtsar < Formula
   sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
 
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
-  depends_on "curl"
+  
   if build.without? "gmt"
+    depends_on "curl"
     depends_on "cmake" => :build
     depends_on "autoconf" => :build
   else
+    depends_on "curl"
     depends_on "cmake" => :build
     depends_on "autoconf" => :build
     depends_on "gmt" => "with-v5"
