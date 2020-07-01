@@ -7,8 +7,9 @@ class Gmtsar < Formula
   desc "An open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT). The code is written in C and will compile on any computer where GMT and NETCDF are installed."
   homepage "https://topex.ucsd.edu/gmtsar/"
 #  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar"
-  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar"
-  sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
+#  sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
+  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.0.tar"
+  sha256 "6b9ab3cab868951252dcc00882cf249c43db44265c5a2da21e520db5b8c907b9"
 
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
   
@@ -32,7 +33,7 @@ class Gmtsar < Formula
   end
 
   def caveats; <<-EOS
-      GMTSARv5.8 currently uses GMT5 or GMT6.  Installing without options will automatically install GMT6 with all libraries using a Homebrew formula.  
+      GMTSARv6.0 currently uses either GMT5 or GMT6.  Installing without options will automatically install GMT6 with all libraries using a Homebrew formula.  
 If you already have GMT installed with all the (previously optional) libraries, use the without-gmt option at installation. If you choose to use the without-gmt option, please make sure that GMT6 will be accessible to GMTSAR at runtime (i.e., included in your path). This is strongly discouraged because it is unlikely that you will have all of the dependencies in the correct locations for Homebrew. 
       EOS
   end
