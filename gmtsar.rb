@@ -25,7 +25,7 @@ class Gmtsar < Formula
   def install
     ENV.deparallelize  # if your formula fails when building in parallel
 
-     system "make spotless"
+ #  system "make spotless"
      system "autoconf"
      system "./configure", "--with-orbits-dir=/usr/local/orbits",
                            "--prefix=#{prefix}"
