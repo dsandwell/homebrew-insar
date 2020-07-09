@@ -9,7 +9,7 @@ class Gmtsar < Formula
 #  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V5.8.tar"
 #  sha256 "25fe7f134734b14d7ffd620614d363e63d07038b9377e21828cb42999fd79b12"
   url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.0.tar"
-  sha256 "6b9ab3cab868951252dcc00882cf249c43db44265c5a2da21e520db5b8c907b9"
+  sha256 "beab80cda2279b8bd3bd42974d30bf68e73b3442010a642778f8a8960245db1a"
 
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
   
