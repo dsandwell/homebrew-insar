@@ -19,8 +19,11 @@ class Gmtsar < Formula
 # url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.2.3.tar"
 # sha256 "0ee2ea06fb4c1526061b0cc14e8c2e0028e738ab8aaa642bb55c7273ee192b3c"
 # use sha256sum on topex  
-  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.3.tar"
-  sha256 "318064a3cabf97e5b7d76ffb8ff2a2654c766168784c32db9e7d2a08d3fa7eb2"
+# url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.3.tar"
+# sha256 "318064a3cabf97e5b7d76ffb8ff2a2654c766168784c32db9e7d2a08d3fa7eb2"
+  url "https://topex.ucsd.edu/gmtsar/tar/GMTSAR_V6.4.tar"
+  sha256 "3355786da4b08864862454d35830e96ebd7d7bafc3324376042661df406b0886"
+
 
   option "without-gmt", "Does not install GMT; use this option only if you already installed GMT with all of the (previously optional) libraries (e.g., gdal, pcre, etc).  This is not recommended."
   
@@ -46,7 +49,7 @@ class Gmtsar < Formula
   end
 
   def caveats; <<-EOS
-      GMTSARv6.3 currently uses either GMT5 or GMT6.  Installing without options will automatically install GMT6 with all libraries using a Homebrew formula.  
+      GMTSARv6.4 currently uses either GMT5 or GMT6.  Installing without options will automatically install GMT6 with all libraries using a Homebrew formula.  
 If you already have GMT installed with all the (previously optional) libraries, use the without-gmt option at installation. If you choose to use the without-gmt option, please make sure that GMT6 will be accessible to GMTSAR at runtime (i.e., included in your path). This is strongly discouraged because it is unlikely that you will have all of the dependencies in the correct locations for Homebrew. 
       EOS
   end
